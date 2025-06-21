@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 05 Activity</title>
+
+<!-- jQuery first -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script>
+	$(document).on("mobileinit", function () {
+		$.mobile.ajaxEnabled = false;
+	});
+</script>
+
+<!-- jQuery Mobile -->
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<!-- Now load custom jQuery Mobile theme and icons -->
+<link rel="stylesheet" href="https://sotd.us/cassandradaniel/My%20Favorite%20Things/themes/LabAssignment05.min.css">
+<link rel="stylesheet" href="https://sotd.us/cassandradaniel/My%20Favorite%20Things/themes/jquery.mobile.icons.min.css">
+
+<!-- Custom CSS -->
+ <style>
+	body {
+		background-color: #F0F2F5;
+		font-family: Arial, sans-serif;
+		margin: 0;
+		padding: 0;
+	}
+	
+	header {
+		background-color: #2C3E50; /* Dark blue-gray */
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 20px;
+	}
+	
+	header img {
+		height: 60px;
+		width: auto;
+	}
+	
+	header h1 {
+		font-size: 24px;
+		margin-left: 15px;
+	}
+	
+	nav {
+		background-color: #D6D8DF; /* Light gray */
+		padding: 15px;
+		text-align: center;
+	}
+	
+	nav a {
+		margin: 10px;
+		text-decoration: none;
+		color: #1A5276; /* Deep blue */
+		font-weight: bold;
+		padding: 10px 20px;
+		background-color: #ffffff;
+		border: 1px solid #AAB7B8;
+		border-radius: 5px;
+		display: inline-block;
+	}
+	
+	nav a:hover {
+		background-color: #D0D3D4;
+	}
+	
+	main {
+		padding: 20px;
+		text-align: center;
+	}
+		
+	footer {
+		background-color: #2C3E50;
+		color: white;
+		text-align: center;
+		padding: 15px;
+		position: relative;
+		bottom: 0;
+		width: 100%;
+		font-size: 14px;
+	}
+	
+	form {
+		margin-top: 20px;
+		text-align: left;
+		display: inline-block;
+		padding: 20px;
+		border: 1px solid #B0BEC5;
+		border-radius: 10px;
+		background-color: #ECEFF1;
+		width: 400px;
+	}
+	
+	form input, form textarea, form select {
+		width: 100%;
+		padding: 10px;
+		margin-top: 5px;
+		margin-bottom: 15px;
+		border: 1px solid #B0BEC5;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+	
+	ol, ul {
+		list-style-position: inside;
+		padding-left: 0;
+		text-align: center;
+		margin: 0 auto;
+	}
+	
+	/* New Quote Panel Styling */
+	#quote-panel {
+		background-color: #E8F0FE;
+		border: 1px solid #B0C4DE;
+		padding: 20px;
+		margin-top: 30px;
+		border-radius: 10px;
+		text-align: center;
+		box-shadow: 2px 2px 8px rgba (0, 0, 0, 0.1);
+	}
+	
+	#guote-panel blocckquote {
+		font-style: italic;
+		font-size: 18px;
+		color: #333366;
+	}
+	
+		.ui-listview a {
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+	}
+</style>
+
+  </script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
+
+</head>
+<body>
+	<header>
+	<img src="https://www.hiddengemsbooks.com/wp-content/uploads/2018/10/magic-book.jpg" alt="Logo">
+		<h1>Welcome to my assignment page</h1>
+	</header>
+	<div data-role="page" id="mainPage">
+	<div data-role="main" class="ui-content">
+	<nav>
+		<a href="ActivityMod02.html" data-ajax="false">Home</a>
+		<a href="Mod03Activity.html" data-ajax="false">Module 03 Activity</a>
+		<a href="Mod04Activity.html" data-ajax="false">Module 04 Activity</a>
+		<a href="Mod05Activity.html" data-ajax="false">Module 05 Activity</a>
+	</nav>
+	
+	<main>
+		<p>Activity Assignment</p>
+		
+		<h2>Ordered List: Great Books to Read</h2>
+		<ol>
+			<li>The Hobbit</li>
+			<li>Harry Potter</li>
+			<li>Pride and Prejudice</li>
+		</ol>
+		
+		<h2>Unordered List: Things I Enjoy</h2>
+		<ul>
+			<li>Reading</li>
+			<li>Gaming</li>
+			<li>Hanging with family and friends</li>
+		</ul>
+		
+		<h2>Filtered List: Favorite Genres by Type</h2>
+		<ul>
+			<li><strong>Fiction:</strong> Fourth Wing</li>
+			<li><strong>Fantasy:</strong> The Lord of the Rings</li>
+			<li><strong>Action Romance:</strong> Divergent</li>
+		</ul>
+		
+		<h2>Favorite Things Survey</h2>
+		<form action="#" method="post">
+			<label for="name">Your Name:</label><br>
+			<input type="text" id="name" name="name"><br><br>
+			
+			<label for="favbook">Favorite Book:</label><br>
+			<input type="text" id="favbook" name="favbook"><br>
+			
+			<label for="hobby">Favorite Hobby:</label><br>
+			<input type="text" id="hobby" name="hobby"><br><br>
+			
+			<label for="genre">Preferred Genre:</label><br>
+			<select id="genre" name="genre">
+			<option value="fantasy">Fantasy</option>
+			<option value="romance">Romance</option>
+			<option value="sci-fi">Science Fiction</option>
+			<option value="non-fiction">Non-Fiction</option>
+			<option value="mystery">Mystery</option>
+			<option value="fiction">Fiction</option>
+			<option value="other">Other</option>
+			</select><br>
+
+			<!-- Hidden input box for "Other" genre -->
+			<div id="other-genre-box" style="display: none; margin-top: 10px;">
+			<label for="otherGenre">Please enter your preferred genre:</label><br>
+			<input type="text" id="otherGenre" name="otherGenre">
+			</div>
+			
+			<input type="submit" value="Submit Survey">
+		</form>
+		
+		<!-- Quote Panel -->
+		
+		<section id="quote-panel">
+			<h2>One of My Favorite Quotes</h2>
+			<blockquote>
+				"There are good days and hard days. Don't let the hard days win."<br>- Sarah J Maas
+			</blockquote>
+		</section>
+	</main>
+	
+	<footer>
+	&copy; Cassandra Daniel | Contact: cassandra.daniel@smail.rasmussen.edu
+	</footer>
+	<script>
+		function showOtherGenre() {
+			const genre = document.getElementById("genre").value;
+			const otherBox = document.getElementById("other-genre-box");
+			otherBox.style.display = (genre === "other") ? "block" : "none";
+		}
+		$(document).on("pagecreate", function () {
+			$("#genre").on("change", function () {
+			const genre = $(this).val();
+			const otherBox = $("#other-genre-box");
+			otherBox.css("display", genre === "other" ? "block" : "none");
+			});
+			});
+	</script>
+	</div>
+</body>
+</html>
